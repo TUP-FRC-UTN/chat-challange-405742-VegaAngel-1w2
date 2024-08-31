@@ -1,0 +1,10 @@
+.bg-purple{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+color: white;
+}
+.bg-orange{
+    background-image: linear-gradient(to right, #ff0000, #ff6300, #ff9500, #ffc100, #f6ea00);
+    color:black
+}
+

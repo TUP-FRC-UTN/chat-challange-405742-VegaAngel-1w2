@@ -1,0 +1,37 @@
+<div class="conteiner-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">Sala de chat</div>
+        <div class="card-body">
+          <h5 class="card-title">Conversación</h5>
+          <ul class="list-group">
+            @for (item of _service.mensajes; track $index) {
+
+            <li
+              [ngClass]="{
+                'text-white bg-purple': _service.first !== item.envia,
+                'text-white bg-orange': _service.first === item.envia
+              }"
+              class="list-group-item text-start badge rounded-pill"
+            >
+              {{ item.envia.name }} : {{ item.valor }}
+            </li>
+            <small>{{ item.fecha | date : "short" }}</small>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="row">
+        <div class="col-6">
+          <app-mensaje-usuario [user]="usario1"></app-mensaje-usuario>
+        </div>
+        <div class="col-6">
+          <app-mensaje-usuario [user]="usario2"></app-mensaje-usuario>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
